@@ -1,9 +1,6 @@
 package com.jwt.jwt_training.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class User {
@@ -12,10 +9,13 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
+    @Column(nullable = false)
     private String email;
 
+    @Column(nullable = false)
     private String password;
 
+    @Column(nullable = false)
     private String role;
 
     //Getters & setters
